@@ -16,8 +16,8 @@ public class MainJuego {
         
         int menu;
         boolean salir = false;
-        Tirada tirada = new Tirada();
-        
+        Tirada tirada1 = new Tirada();
+        Tirada tirada2 = new Tirada();
         
         do{
             
@@ -33,19 +33,24 @@ public class MainJuego {
             case 1:
                 
                 System.out.println("Orden: el primer valor es del primer dado y el segundo del otro.");
-                System.out.println("Primera tirada: ");
-                System.out.println(tirada.getTirada());
-                System.out.println("Segunda tirada: ");
-                tirada.tirarOtraVez();
-                System.out.println(tirada.getTirada());
+                System.out.println("Tirada jugador 1: ");
+                System.out.println(tirada1.getTirada());
+                System.out.println("Tirada jugador 2: ");
+                System.out.println(tirada2.getTirada());
+                tirada1.tirarOtraVez();
+                tirada2.tirarOtraVez();
+                System.out.println("");
                 break;
                 
             case 2:
                 
-                System.out.println("Número de seis: " +tirada.calcularSeis());                
-                tirada.getSuma();
+                System.out.println("Número de seis del jugador 1: " +tirada1.calcularSeis());
+                System.out.println("Número de seis del jugador 2: " +tirada2.calcularSeis());
+                tirada1.getSuma();
+                tirada2.getSuma();
                 System.out.println("1:Gana primer jugador; 2:Gana segundo jugador; 0:Empate");
-                System.out.println(tirada.HaGanado(tirada));
+                System.out.println(tirada1.HaGanado(tirada2));
+                System.out.println("");
                 break;
                 
             case 3:
