@@ -4,7 +4,6 @@
  */
 package com.politecnicomalaga.loteriamain;
 
-import java.util.Arrays;
 
 /**
  *
@@ -16,29 +15,33 @@ public class Loteria {
     private int [] boletoGanador;
     
     
-    public  Loteria(){
+    public Loteria(){
         
         boletoGanador = new int [7];
     }
     
     public void ganadora(){
-                    
+        
+        boolean diferente;
+        
         for(int i = 0; i < boletoGanador.length; i++){
-            boletoGanador[i] = (int)(Math.random()*49) + 1;     
-            for(int j = 0; j < i; j++){
+            diferente = false;
+            boletoGanador[i] = (int)(Math.random()*49) + 1;
             
-                do{
-                    
-                   boletoGanador[i] = (int)(Math.random()*49) + 1; 
-                    
-                }while(boletoGanador[i] == boletoGanador[j]);
+            for(int j = 0; j < i; j++){
+                
+                if(boletoGanador[i] != boletoGanador[j]){
+                    diferente = true;
+                }
                 
             }
             
-        }
+            if(!diferente){
+                boletoGanador[i] = (int)(Math.random()*49) + 1;
+            }
             
-  
-        
+        }
+               
     }
     
     public void verGanadora(){
@@ -54,11 +57,9 @@ public class Loteria {
         
         for(int i = 0; i < boleto.length - 1; i++)
             for(int j = 0; j < boletoGanador.length - 1; j++)
-            
-            
-            //if(boleto[i] == boleto[j]){
-            
-            if(Arrays.equals(boleto, boletoGanador)){
+
+            //if(Arrays.equals(boleto, boletoGanador)){
+            if(boleto[i] == boleto[j]){
                 contador++;
             }
         

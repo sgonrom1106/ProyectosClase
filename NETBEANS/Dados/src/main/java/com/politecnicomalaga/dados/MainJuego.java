@@ -32,13 +32,13 @@ public class MainJuego {
             
             case 1:
                 
+                tirada1.tirarOtraVez();
+                tirada2.tirarOtraVez();                
                 System.out.println("Orden: el primer valor es del primer dado y el segundo del otro.");
                 System.out.println("Tirada jugador 1: ");
                 System.out.println(tirada1.getTirada());
                 System.out.println("Tirada jugador 2: ");
                 System.out.println(tirada2.getTirada());
-                tirada1.tirarOtraVez();
-                tirada2.tirarOtraVez();
                 System.out.println("");
                 break;
                 
@@ -49,6 +49,8 @@ public class MainJuego {
                 tirada1.getSuma();
                 tirada2.getSuma();
                 System.out.println("1:Gana primer jugador; 2:Gana segundo jugador; 0:Empate");
+                System.out.println(tirada1.getSuma());
+                System.out.println(tirada2.getSuma());
                 System.out.println(tirada1.HaGanado(tirada2));
                 System.out.println("");
                 break;

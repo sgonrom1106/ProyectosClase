@@ -26,6 +26,31 @@ public class Tirada {
         
     }
     
+    /*
+    - Otro método de devolver el valor de los dados (por teclado)
+    
+    public int getValorDado(int d){
+    
+        if(d==1){
+            return dado1.getValor();
+        }else
+            return dado2.getValor();    
+    } 
+   
+    - Devolver valor dado con imágenes
+    public String getResultadoValor(int d){
+        
+        String res = ".png";
+        
+        if(d == 1){
+            res = dado1.getValor() + res;
+        }else
+            res = dado2.getValor() + res;
+        
+        return res;
+    }
+    
+    */
     public int getSuma(){
         
         int suma;

@@ -53,8 +53,11 @@ public class Columna {
     
     public int comprobarColumna(int [][] matriz, int [] columna){
         
+        int ganadorLength, num;
         boolean diferente;
         
+        ganadorLength = 0;
+        while(ganadorLength < boletoGanador)
         for(int j = 0; j < matriz[0].length; j++){ 
             
             diferente = false;
