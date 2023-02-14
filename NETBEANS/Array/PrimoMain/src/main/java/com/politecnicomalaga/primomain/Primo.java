@@ -4,6 +4,8 @@
  */
 package com.politecnicomalaga.primomain;
 
+import static java.lang.Math.sqrt;
+
 /**
  *
  * @author seryi
@@ -37,15 +39,18 @@ class Primo {
     
     public boolean esPrimo(int numero){
         
-        boolean esPrimo = true;
+        if(numero == 1){
+            return true;
+        }
         
-        for(int i = 2; i < numero; i++)
+        int limite = (int) sqrt(numero);
+        for(int i = 2; i <= limite; i++)
             if(numero % i == 0){
-                esPrimo = false;
+                return false;
                 
             }
         
-        return esPrimo;
+        return true;
         
     }
     

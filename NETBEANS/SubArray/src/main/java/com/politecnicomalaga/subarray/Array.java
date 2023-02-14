@@ -10,4 +10,23 @@ package com.politecnicomalaga.subarray;
  */
 public class Array {
     
+    private int [] array;
+    private int tamaño;
+    
+    public Array(){
+        
+        array = new int [tamaño];
+        
+    }
+    
+    public void crearVector(){
+        
+        for(int i = 0; i < array.length; i++){
+            System.out.println(array[i] + " ");
+            
+            System.out.println("");
+        }
+        
+    }
+    
 }
