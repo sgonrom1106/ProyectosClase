@@ -31,7 +31,7 @@ public class Hotel {
     
     public int buscarCliente(String DNI){
         
-        for(int i = 0; i< cliente.size(); i++){
+        for(int i = 0; i < cliente.size(); i++){
             
             if(cliente.get(i).getDNI().contentEquals(DNI)){
                 
@@ -49,7 +49,7 @@ public class Hotel {
     public String mostrarClienteDNI(String DNI){
         
             if(buscarCliente(DNI) != -1){
-                return cliente.get(this.buscarCliente(DNI)).mostrarDatosCliente();
+                return cliente.get(this.buscarCliente(DNI)).getDNI();
             }
         
         return null;
@@ -64,7 +64,8 @@ public class Hotel {
 
     public void eliminarCliente(String DNI){
         
-        cliente.remove();
+        Cliente clientefuera = new Cliente(DNI);
+        cliente.remove(clientefuera);
     
     }
     

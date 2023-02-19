@@ -36,11 +36,13 @@ public class PuntosPiloto {
     
     public void crearMatrizBooleana(){
         
+        int piloto = (int)(Math.random()*6) + 1;
+        
         for(int i = 0; i < piloto.length; i++){
             for(int j = 0; j < piloto[i].length; j++){
-                boolPiloto[i][j] = false;
+                System.out.print(boolPiloto[i][j] + " ");
                 
-                System.out.println(boolPiloto[i][j] + " ");
+                
             }
             
             System.out.println("");

@@ -91,11 +91,7 @@ public class Cliente {
     public String getFechaNacimiento() {
         return fechaNacimiento;
     }
-
-    
-    public String mostrarDatosCliente
-    
-    
+   
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }

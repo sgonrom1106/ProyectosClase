@@ -67,6 +67,11 @@ public class Primo {
                 System.out.print(matrizOrdenada[i][j] + " ");
                 
                 if(esPrimo(matriz[1][j])){
+                    for (int k = 0; k < matrizOrdenada.length - 1; k++) {
+                        int aux = matrizOrdenada[1+i];
+                        matrizOrdenada[1+i] = matrizOrdenada[0];
+                        matrizOrdenada[0]= aux;  
+}
                     
                 
             }
